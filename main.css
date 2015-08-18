@@ -1,0 +1,26 @@
+body {
+	background-color: #a9a9a9;
+}
+
+.Calculator {
+	background-color: brown;
+	height: 350px;
+	width: 700px;
+	padding: 15px;
+}
+
+#input {
+	height: 35px;
+	width: 670px;
+	margin: 2px 0px;
+}
+
+.enter {
+	width: 150px;
+	height: 25px;
+
+}
+
+.numbers {
+	display: block;
+}
