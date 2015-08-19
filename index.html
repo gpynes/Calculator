@@ -4,36 +4,42 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div class="Calculator">
-		<div class="topBar">
-			<input id="input" type="text" name="math" placeholder="Enter math stuffs">
+	<div class="calc">
+		<div class="row">
+			<input class="input">
 		</div>
-		<button type="button" class="enter">Algebraic!</button>
-		<div class="numbers">
-			<span class="numbers">
-				<button type="button" class="nums" id="1">1</button>
-				<button type="button" class="nums" id="2">2</button>
-				<button type="button" class="nums" id="3">3</button>
-			</span>
-
-			<span class="numbers">
-				<button type="button" class="nums" id="4">4</button>
-				<button type="button" class="nums" id="5">5</button>
-				<button type="button" class="nums" id="6">6</button>
-			
-			</span>
-
-			<span class="numbers">
-				<button type="button" class="nums" id="7">7</button>
-				<button type="button" class="nums" id="8">8</button>
-				<button type="button" class="nums" id="9">9</button>
-			</span>
-			<button type="button" class="nums" id="0">0</button>
-			<button type="button" class="enter" id="return">Enter</button>
+		<div class="row">
+			<div class="numbers" id="7">7</div>
+			<div class="numbers" id="8">8</div>
+			<div class="numbers" id="9">9</div>
+			<div class="numbers" id="%">%</div>
 		</div>
 
+		<div class="row">
+			<div class="numbers" id="4">4</div>
+			<div class="numbers" id="5">5</div>
+			<div class="numbers" id="6">6</div>
+			<div class="numbers" id="/">/</div>
+		</div>
 
+		<div class="row">	
+			<div class="numbers" id="1">1</div>
+			<div class="numbers" id="2">2</div>
+			<div class="numbers" id="3">3</div>
+			<div class="numbers" id="*">*</div>
+		</div>
 
+		<div class="row">
+			<div class="numbers" id="0">0</div>
+			<div class="numbers" id=".">.</div>
+			<div class="numbers" id="+">+</div>
+			<div class="numbers" id="-">-</div>
+		</div>
+
+		<div class="row">
+			<div class="enter bigBtn" id="enter">Enter</div>
+			<div class="clear bigBtn" id="clear">AC</div>	
+		</div>
 	</div>
 
 	<script type="text/javascript" src="calculator.js"></script>

@@ -1,42 +1,69 @@
 body {
-	background-color: #a9a9a9;
+	background-color: #111;
+	color: #DDD;
 }
-
-.Calculator {
-	background-color: brown;
-	height: 350px;
-	width: 700px;
-	padding: 15px;
+.calc {
+	width: 500px;
+	margin: 30px auto;
+	background: #4F4F4F;
 }
-
-#input {
-	height: 35px;
-	width: 670px;
-	margin: 2px 0px;
+input {
+	margin: 20px 0	;	
+	height: 90px;
+	width: 457px;
+	color: #111;
+	text-align: right;
+	padding-right: 15px;	
+	font-size: 36px; 
+	outline: none;
+	border-radius: 5px;
+	border: none;
+	box-shadow: none; 
 }
-
-.enter {
-	width: 150px;
-	height: 25px;
-	margin-bottom: 15px;
+input:hover, input:active, input:focus {
+	border: none;
+	box-shadow: none; 
+} 
+.row {
+	text-align: center;
+	margin: 5px auto;
 
 }
-
+.row>div {
+	display: inline-block;
+	border-radius: 5px;
+	transition: ease .3s;
+	cursor: pointer;
+}
+.row>div:hover{
+	background: #111;
+	color: #FFF;
+	border: 1px solid #111;
+}
 .numbers {
-	display: block;
+	padding-top: 5px;
+	font-size: 50px;
+	width: 110px;
+	height: 70px;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+}
+.bigBtn {
+	padding: 10px 0;
+	font-size: 50px;
+	width: 226px;
+	border: 1px solid #DDD;
+	border-radius: 3px;	
+	margin-bottom: 20px;
 }
 
-.nums {
-	width: 100px;
-	height: 50px;
-	margin: 5px;
-	font-size: 25px;
-}
 
-#return {
-	    position: absolute;
-    height: 50px;
-    width: 216px;
-    margin: 5px;
-    margin-left: 9px;
-}
+
+
+
+
+
+
+
+
+

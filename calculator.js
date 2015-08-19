@@ -1,45 +1,35 @@
-var subBttn = document.querySelectorAll( ".enter" );
-var inText = document.getElementsByTagName( "input" );
-var numbers = document.querySelectorAll( ".nums" );
-var currentNumber = 0;
-var keys = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 ];
+var numberString = "";
+var inputButtons = document.querySelectorAll( ".numbers" );
+var clear = document.querySelector( ".clear" );
+var enter = document.querySelector( ".enter" );
+var input = document.querySelector( ".input" );
 
-
-
-var p = function( word ) {
-	console.log( word );
-};
-
-
-//Retrieves text from input box for use as string.
-function getText() {
-	console.log(inText.input.value );
-	currentNumber = parseInt( inText.input.value );
-}
-
-//Adds button values to input box text
-function addInput( i ) {
-	inText.input.value += keys[ i ];
-}
-
-function clearInput() {
-	inText.input.value = null;
-}
-
-for ( var i = 0; i < numbers.length; i++ ) {
-	numbers[ i ].addEventListener( "click", (function(i) {
-        return function() { 
-            console.log(i); 
-            addInput( i );
-        }; 
-    } ) ( i ) );
-}
-
-for ( var i = 0; i < subBttn.length; i++ ) {
-	subBttn[ i ].addEventListener( "click", (function(i) {
+//Listens for clicks on all number and operations buttons
+for ( var i = 0; i < inputButtons.length; i++ ) {
+	inputButtons[ i ].addEventListener( "click", ( function( i ) {
 		return function() {
-			getText();
-			clearInput();
+			console.log( i );
+			console.log( inputButtons[ i ].innerHTML );
+			//Sets evaluation number to newly clicked amount.
+			numberString += inputButtons[ i ].innerHTML;
+			//Resets the value shown on screen to match new value
+			input.value = numberString;
 		}
-	} ) ( i ) );
+	} ( i ) ) );
 }
+
+enter.addEventListener( "click", function() {
+	console.log( this);
+	//Sets string to equal itself evaluated
+	numberString = eval(numberString);
+	console.log( numberString );
+	//Resets the value shown on screen to match new value
+	input.value = numberString;
+});
+
+
+clear.addEventListener( "click", function() {
+	//Resets the value shown on screen to be empty
+	numberString = "";
+	input.value = numberString;
+});
